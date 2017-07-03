@@ -1,11 +1,17 @@
 #/bin/bash
-#script in cd Documents/Box\ Sync/JP/scripts/
-#RootDir=/Users/paulrowley/Documents/DTI/5-SS-ROI
+#This script takes individual sample tensor volumes as the input. The output is a folder named based on the tensor file basename. Briefly, the script itself warps a segmentation map to the sample data, computes region-based diffusion measures, and exports the data in text files.
 
-Home=/Users/par258
+#To use this script, you must set paths to your RootDir and StarterPack. As well, you must arrange your data in the following manner:
+#StarterPack= this is a directory containing the UNC atlas data (atlas_segmentation_mask.nii.gz, mask_p72.nii.gz, dti_atlas_scaled_masked_ad.nii.gz, dti_atlas_scaled_masked_rd.nii.gz, fat_atlas_masked.nii.gz, md_atlas_masked_scale.nii.gz). For more information on this data please see: Rumple A, McMurray M, Johns J, Lauder J, Makam P, Radcliffe M, et al. (2013) 3-Dimensional Diffusion Tensor Imaging (DTI) Atlas of the Rat Brain. PLoS ONE 8(7): e67334. https://doi.org/10.1371/journal.pone.0067334
+
+#RootDir = directory containing folders corresponding to each experiment
+#Experiment = name of directory corresponding to each experiment
+#Group = experimental group folder name.
+  #each $Group directory should contain only the tensor files (ending in composed_iso.nii.gz). 
+
+Home=/Users/<user-name>
 RootDir=$Home/Documents/DTI/5-SS-ROI
 StarterPack=$Home/Documents/DTI/UNC-ROI/UNC-ROI-p72-starterpack
-#for stats maps, just reorient and resample
 #set -e
 #set -v
 
