@@ -31,9 +31,11 @@ select Group in $Experiment/*; do test -n "$Group" && break; echo ">>> Invalid S
 # ${x%.*.*}=$prefix=/path/to/sample_directory
 # ${x}=/path/to/sample-in-group-dir.nii.gz
 
+#create sample data directory
 for x in $Group/*.nii.gz; do
     mkdir "${x%.*.*}" && mv "$x" "${x%.*.*}"
 
+# transform data into atlas orientation
 input=${x%.*.*}/*.nii.gz
 output=${x%.*.*}/*.nii.gz
 affineSymTensor3DVolume -in ${input} -out ${output}  -euler 90 -180 0
@@ -60,7 +62,7 @@ affineSymTensor3DVolume -in ${input} -out ${output}  -euler 90 -180 0
   SVResample -in $fixed_img_4 -size 171 171 171 -vsize .15 .15 .15
 
 
-# run multicontrast warping (md, fa, md, rd) with higher resolution of group A template
+# run multicontrast warping (md, fa, md, rd) with higher resolution of UNC template
 prefix=${x%.*.*}
 segmentation=$StarterPack/atlas_segmentation_masked.nii.gz
 
@@ -76,7 +78,7 @@ moving_img_3=$StarterPack/dti_atlas_scale_masked_rd.nii.gz
 fixed_img_4=${prefix}_ad.nii.gz
 moving_img_4=$StarterPack/dti_atlas_scale_masked_ad.nii.gz
 
-#echo "registering UNC atlas to Template for $label"
+#echo "registering UNC atlas to $Group"
 # #RegisterAtlasToTemplate
 #if [ -e "${prefix}_ad.nii.gz" ]; then
 nohup ANTS 3 -m PR[$fixed_img_1,$moving_img_1,1,4] -m PR[$fixed_img_2,$moving_img_2,1,4] -m PR[$fixed_img_3,$moving_img_3,1,4] -m PR[$fixed_img_4,$moving_img_4,1,4] -o ${prefix}_template_ANTS_PR.nii -i 10x20x5  -r Gauss[3,0] -t SyN[0.25] --affine-metric-type CC --number-of-affine-iterations 1000x1000x1000
