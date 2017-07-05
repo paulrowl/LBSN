@@ -1,6 +1,5 @@
 #bin/bash
-##########################################################################################################################################Use the commands in this script after extracting volumetric parameter maps containing NODDI tensor information for all (two or three) samples in each scanning batch.
-##########################################################################################################################################
+#Use the commands in this script after extracting volumetric parameter maps containing NODDI tensor information for all (two or three) samples in each scanning batch.
 
 
 ### enter the following variables.
