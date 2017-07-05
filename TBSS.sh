@@ -2,11 +2,11 @@
 
 ##### FULLY AUTOMATED TBSS SCRIPT #####
 ##### To execute:
-#1. Fill in full pathname for RootDir. This corresponds to the parent folder containing a folder for each experiment ($Experiment) which contain the TBSS comparison groups ($Group)
-#2. Fill in the full pathname to your templates directory
+#1. Fill in full pathname for RootDir. This corresponds to the parent folder containing a folder for each experiment ($Experiment) which contain the TBSS comparison groups ($Group). Thus your data should be organized: DataDir=$RootDir/$Experiment/$Group
+#2. Fill in the full pathname to your templates directory (just for viewing purposes)
 #3. Go to directory containing TBSS.sh in Terminal and type sh TBSS.sh
 
-Home=/Users/par258
+Home=/Users/<username>
 RootDir=$Home/Documents/DTI/3-TBSS
 Templates=$Home/Documents/DTI/templates
 
