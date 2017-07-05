@@ -1,0 +1,47 @@
+################################################
+# ITK-SnAP Label Description File
+# File format: 
+# IDX   -R-  -G-  -B-  -A--  VIS MSH  LABEL
+# Fields: 
+#    IDX:   Zero-based index 
+#    -R-:   Red color component (0..255)
+#    -G-:   Green color component (0..255)
+#    -B-:   Blue color component (0..255)
+#    -A-:   Label transparency (0.00 .. 1.00)
+#    VIS:   Label visibility (0 or 1)
+#    IDX:   Label mesh visibility (0 or 1)
+#  LABEL:   Label description 
+################################################
+    0     0    0    0        0  0  0    "Clear Label"
+    1   255    0    0        1  1  0    "Hippocampus"
+    2   142  255   22        1  1  0    "External Capsule"
+    3    64  230  255        1  1  0    "Caudate, Putamen, Globus Pallidus"
+    4   255  255    0        1  1  0    "Anterior Commissure"
+    5   221   95    0        1  1  1    "Substantia Nigra"
+    6   255    0  255        1  1  0    "Internal Capsule"
+    7   128   62   15        1  1  0    "Thalamus"
+    8   126  228   54        1  1  0    "Cerebellum"
+    9    34  213  156        1  1  0    "Superior Colliculus"
+   10    15  101  224        1  1  0    "Third Ventricle"
+   11    27   95   86        1  1  1    "Hypothalamus"
+   12   135   23  219        1  1  0    "Inferior Colliculus"
+   13   217  213  140        1  1  0    "Central Gray"
+   14     0   30  214        1  1  0    "Neocortex"
+   15   187   49   31        1  1  0    "Amygdala"
+   16   134    0  127     0.91  1  0    "Olfactory Bulb"
+   17   167  207   23        1  1  0    "Brainstem"
+   18    30  139   68        1  1  0    "Rest of Midbrain"
+   19    30  139   68        1  1  0    "Rest of Forebrain"
+   20   200  135  168        1  1  0    "Fimbria"
+   21   147  112  219        1  1  0    "Fornix"
+   22     0    4  123        1  1  1    "VTA"
+   23   255  162   28        1  1  1    "Corpus Callosum"
+   24   196    0  116        1  1  0    "Genu"
+   25    15  101  224        1  1  0    "Lateral Ventricle"
+   26    15  101  224        1  1  0    "Aqueduct"
+   27    15  101  224        1  1  0    "Fourth Ventricle"
+   29   215  190    0        1  1  1    "Splenium"
+   30   255  170    0        1  1  1    "Anterior Piriform Plus"
+   31   255  105  180        1  1  1    "Entorhinal Cortex"
+   33   210  255    1        1  1  1    "Medial PFC"
+   35   139   69   19        1  1  1    "Orbital Cortex"
