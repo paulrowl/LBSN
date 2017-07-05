@@ -66,6 +66,7 @@ fslmaths ${prefix}_TR_odi.nii -sub $right_mask -thr 0 ${top_brain}_odi
 
 #### After ascertaining the translation and euler transformations from manually performing transformations on one output NODDI volumetric paramter, enter the transformation parameters into the variables below. ####
 ###usage -translation trans_X trans_Y trans_Z -euler theta phi psi
+#note: you must reset each of the translation and euler variables in terminal prior to executing the commands for each brain. 
 trans_X=
 trans_Y=
 trans_Z=
